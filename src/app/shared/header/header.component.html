@@ -1,5 +1,5 @@
 <div
-  class="bg-gradient-to-r from-indigo-700 to-blue-500 w-full shadow-sm sticky"
+  class="bg-gradient-to-r from-indigo-700 to-blue-500 w-full sticky top-0 z-50"
 >
   <div class="max-w-screen-2xl mx-auto">
     <!-- Menu -->
@@ -24,6 +24,9 @@
           >Inicio</a
         >
         <a class="hover:text-blue-200 font-semibold" [routerLink]="rutas[1]"
+          >Contacto</a
+        >
+        <a class="hover:text-blue-200 font-semibold" [routerLink]="rutas[2]"
           >Nosotros</a
         >
       </div>
@@ -41,6 +44,11 @@
       <a
         class="py-3 text-center font-semibold text-base hover:text-white hover:bg-blue-400 rounded-md"
         [routerLink]="rutas[1]"
+        >Contacto</a
+      >
+      <a
+        class="py-3 text-center font-semibold text-base hover:text-white hover:bg-blue-400 rounded-md"
+        [routerLink]="rutas[2]"
         >Nosotros</a
       >
     </div>

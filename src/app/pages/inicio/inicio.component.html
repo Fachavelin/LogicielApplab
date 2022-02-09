@@ -1,10 +1,68 @@
+<!-- Header -->
 <div class="bg-gradient-to-r from-indigo-700 to-blue-500 w-full">
   <div class="max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-2">
-      <div>
-        <p>Digitaliza tu negocio con nosostros</p>
+    <div class="grid grid-cols-2 mb-6">
+      <div class="text-white">
+        <p class="text-center mt-3 mb-4 font-bold uppercase text-2xl">
+          {{ hero?.titulo }}
+        </p>
+        <p class="mx-4 mb-4 text-lg font-semibold">
+          {{ hero?.cuerpo }}
+        </p>
+        <div class="flex justify-center mb-4">
+          <a
+            routerLink="/contacto"
+            class="bg-white text-indigo-800 text-lg font-semibold rounded-lg py-2 px-4 text-center"
+            >Contactanos</a
+          >
+        </div>
       </div>
-      <img class="" [src]="imagePath" alt="" />
+      <div class="">
+        <swiper
+          [grabCursor]="true"
+          [effect]="'creative'"
+          [creativeEffect]="{
+            prev: {
+              shadow: true,
+              origin: 'left center',
+              translate: ['-5%', 0, -200],
+              rotate: [0, 100, 0]
+            },
+            next: {
+              origin: 'right center',
+              translate: ['5%', 0, -200],
+              rotate: [0, -100, 0]
+            }
+          }"
+          class="mySwiper"
+        >
+          <ng-template
+            *ngFor="let imagen of imagenes"
+            swiperSlide
+            class="swiper-slide"
+            ><img class="h-full w-auto" [src]="imagen.imagen" alt=""
+          /></ng-template>
+        </swiper>
+      </div>
     </div>
+  </div>
+</div>
+<div *ngIf="body" class="max-w-screen-xl mx-auto">
+  <div
+    *ngFor="let item of body; let i = index"
+    class="grid grid-cols-1 md:grid-cols-2 mb-6 gap-6"
+  >
+    <div class="mx-4">
+      <p class="text-center uppercase font-bold text-2xl">{{ item.titulo }}</p>
+      <p class="font-semibold text-lg">
+        {{ item.cuerpo }}
+      </p>
+    </div>
+    <img
+      [src]="item.imagen"
+      [ngClass]="i % 2 == 0 ? '' : 'md:row-start-1'"
+      alt=""
+      class="object-cover h-80 w-full rounded-lg"
+    />
   </div>
 </div>

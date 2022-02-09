@@ -11,7 +11,7 @@ export class HeaderComponent implements OnInit {
   public icono: string[] = ['fa-solid fa-align-justify', 'fa-solid fa-x'];
   public logo1: string = '../../../assets/images/degradado tonos frios.png';
 
-  public rutas: string[] = ['', '/nosotros'];
+  public rutas: string[] = ['', '/contacto', '/nosotros'];
 
   constructor() {}
 
