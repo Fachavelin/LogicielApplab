@@ -1,32 +1,42 @@
 <div class="bg-gradient-to-r from-blue-500 to-indigo-700 w-full">
   <div class="max-w-screen-xl mx-auto">
-    <div class="grid grid-cols-2">
+    <div class="grid grid-cols-1 md:grid-cols-2">
       <div
         class="py-4 flex justify-center items-center text-white uppercase font-semibold text-base"
       >
         <img src="{{ logo1 }}" alt="" class="h-16 rounded-full" />
         <p class="ml-1">Logiciel Applab</p>
       </div>
-      <div class="flex items-center justify-around">
-        <p class="pb-16 absolute text-white font-semibold text-base">
-          Encuentranos en nuestras redes
-        </p>
-        <a
-          *ngFor="let item of footer"
-          class="z-50 bg-white rounded-full px-4 py-4"
-          href="{{ item.enlace }}"
-          target="_blank"
-          data-bs-toggle="tooltip"
-          data-bs-placement="top"
-          title="{{ item.nombre }}"
-        >
-          <i
-            class="{{
-              item.icono
-            }} fa-lg absolute -translate-x-2 text-indigo-800"
-          ></i>
-        </a>
+      <div class="md:pt-3">
+        <div class="grid">
+          <div class="flex justify-center">
+            <p class="text-white font-semibold text-base text-center">
+              Encuentranos en nuestras redes
+            </p>
+          </div>
+          <div class="flex justify-around pt-3 md:pt-1">
+            <a
+              *ngFor="let item of footer"
+              class="z-50 bg-white rounded-full px-4 py-4"
+              href="{{ item.enlace }}"
+              target="_blank"
+              data-bs-toggle="tooltip"
+              data-bs-placement="top"
+              title="{{ item.nombre }}"
+              ><i
+                class="{{
+                  item.icono
+                }} fa-lg absolute -translate-x-2 text-indigo-800"
+              ></i
+            ></a>
+          </div>
+        </div>
       </div>
+    </div>
+    <div
+      class="flex justify-center text-white text-base pt-4 pb-3 border-t mt-4 md:mt-0"
+    >
+      ©2022 | Desarrollado por Logicel Applab
     </div>
   </div>
 </div>

@@ -34,7 +34,7 @@ export class ContactoComponent implements OnInit {
 
     Swal.fire({
       title: 'Por favor confirmanos que eres humano antes de seguir',
-      html: '<div class="mx-auto" id="recaptcha"></div>',
+      html: '<div id="recaptcha" style="margin-left: 4rem; margin-right: auto;"></div>',
       didOpen: () => {
         grecaptcha.render('recaptcha', {
           sitekey: '6LfdiGgeAAAAAInv3oZS5IF71_mn0vWAb8b79C5c',

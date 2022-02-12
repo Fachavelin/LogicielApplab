@@ -10,7 +10,7 @@ import { DatosFooter } from '../interfaces/datos-footer.interface';
   providedIn: 'root',
 })
 export class WebpageService {
-  private _baseUrl: String = '';
+  private _baseUrl: String = 'https://logiciel-applab-demo.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
