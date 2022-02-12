@@ -5,9 +5,17 @@ import { InicioComponent } from './pages/inicio/inicio.component';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 
 const routes: Routes = [
-  { path: '', component: InicioComponent },
-  { path: 'nosotros', component: NosotrosComponent },
-  { path: 'contacto', component: ContactoComponent },
+  { path: '', component: InicioComponent, data: { animation: 'inicio' } },
+  {
+    path: 'nosotros',
+    component: NosotrosComponent,
+    data: { animation: 'nosotros' },
+  },
+  {
+    path: 'contacto',
+    component: ContactoComponent,
+    data: { animation: 'contacto' },
+  },
 ];
 
 @NgModule({

@@ -1,5 +1,5 @@
 <app-header></app-header>
-<div class="min-h-screen">
-  <router-outlet></router-outlet>
+<div class="min-h-screen" [@routeAnimations]="prepareRoute(outlet)">
+  <router-outlet #outlet="outlet"></router-outlet>
 </div>
 <app-footer></app-footer>

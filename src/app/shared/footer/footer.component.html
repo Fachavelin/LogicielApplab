@@ -1,5 +1,5 @@
 <div class="bg-gradient-to-r from-blue-500 to-indigo-700 w-full">
-  <div class="max-w-screen-xl">
+  <div class="max-w-screen-xl mx-auto">
     <div class="grid grid-cols-2">
       <div
         class="py-4 flex justify-center items-center text-white uppercase font-semibold text-base"
@@ -12,21 +12,19 @@
           Encuentranos en nuestras redes
         </p>
         <a
-          class="z-50"
-          href="https://www.facebook.com/Logiciel-AppLab-115115559920070"
+          *ngFor="let item of footer"
+          class="z-50 bg-white rounded-full px-4 py-4"
+          href="{{ item.enlace }}"
           target="_blank"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          title="{{ item.nombre }}"
         >
-          <img class="h-8" [src]="icons[0]" alt="" />
-        </a>
-        <a
-          class="z-50"
-          href="https://www.instagram.com/logicielapplab/"
-          target="_blank"
-        >
-          <img class="h-8" [src]="icons[1]" alt="" />
-        </a>
-        <a class="z-50" href="" target="_blank">
-          <img class="h-8" [src]="icons[2]" alt="" />
+          <i
+            class="{{
+              item.icono
+            }} fa-lg absolute -translate-x-2 text-indigo-800"
+          ></i>
         </a>
       </div>
     </div>

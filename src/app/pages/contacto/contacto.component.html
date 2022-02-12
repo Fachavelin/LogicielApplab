@@ -31,7 +31,7 @@
             <span
               *ngIf="validarCampo('telefono')"
               class="text-right text-base font-light"
-              >Ingrese un número de teléfono es válido</span
+              >Ingrese un número de teléfono válido</span
             >
           </div>
           <div class="grid">
@@ -193,7 +193,7 @@
           type="submit"
           class="bg-white text-blue-800 text-lg font-semibold rounded-lg py-2 px-4 text-center"
           [ngClass]="
-            contactoForm.touched ? 'hover:bg-slate-100' : ' bg-slate-400'
+            contactoForm.touched ? 'hover:bg-slate-100' : ' bg-opacity-80'
           "
           [disabled]="!contactoForm.valid || enviando"
           (click)="mostrarCapcha()"

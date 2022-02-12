@@ -4,6 +4,7 @@ import { HttpClient } from '@angular/common/http';
 import { ImagenesHero } from '../interfaces/imagenes-hero.interface';
 import { DatosHero } from '../interfaces/datos-hero.interface';
 import { DatosBody } from '../interfaces/datos-body.interface';
+import { DatosFooter } from '../interfaces/datos-footer.interface';
 
 @Injectable({
   providedIn: 'root',
@@ -29,5 +30,11 @@ export class WebpageService {
     const url = `${this._baseUrl}/api/webpage/datos-body`;
 
     return this.http.get<DatosBody[]>(url);
+  }
+
+  cargarDatosFooter() {
+    const url = `${this._baseUrl}/api/webpage/datos-footer`;
+
+    return this.http.get<DatosFooter[]>(url);
   }
 }
