@@ -1,9 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 import { WebpageService } from '../../services/webpage.service';
 import { DatosBody } from 'src/app/interfaces/datos-body.interface';
 import { DatosHero } from '../../interfaces/datos-hero.interface';
 import { ImagenesHero } from '../../interfaces/imagenes-hero.interface';
+
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
 @Component({
   selector: 'app-inicio',
@@ -15,6 +18,13 @@ export class InicioComponent implements OnInit {
   public body: DatosBody[] = [];
   public hero!: DatosHero;
   public imagenes: ImagenesHero[] = [];
+
+  pagination = {
+    clickable: true,
+    renderBullet: function (index: number, className: string) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>';
+    },
+  };
 
   constructor(private ws: WebpageService) {}
 

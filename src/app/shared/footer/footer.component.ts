@@ -8,7 +8,7 @@ import { WebpageService } from '../../services/webpage.service';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  public logo1: String = '../../../assets/images/degradado tonos frios.png';
+  public logo1: String = '../../../assets/images/LOGO NUEVO LOGICIEL.png';
 
   public footer: DatosFooter[] = [];
 

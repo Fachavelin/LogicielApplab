@@ -2,12 +2,28 @@
   <p class="text-center my-4 text-xl font-bold uppercase">Contactanos</p>
   <!-- Contact form -->
   <div
-    class="bg-blue-500 h-full text-white font-semibold text-lg rounded-lg pt-4 mx-4"
+    class="bg-blue-500 h-full text-white font-semibold text-lg rounded-lg pt-4 mx-4 mb-4"
   >
     <form action="" [formGroup]="contactoForm">
+      <div class="mx-4 font-bold mb-4 hidden md:block">
+        <p>
+          ¡Hablemos!
+        </p>
+        <p>
+          Nos encantaría saber en qué estás trabajando. Envíenos una nota aquí y nos pondremos en contacto con usted dentro de las 24 horas.
+        </p>
+      </div>
       <div class="grid md:grid-cols-3">
         <div class="mx-4 py-4 col-span-3 md:col-span-2">
           <div class="grid">
+            <div class="mx-4 font-bold mb-4 md:mb-0 md:hidden">
+              <p>
+                ¡Hablemos!
+              </p>
+              <p>
+                Nos encantaría saber en qué estás trabajando. Envíenos una nota aquí y nos pondremos en contacto con usted dentro de las 24 horas.
+              </p>
+            </div>
             <label for="">Correo electrónico</label>
             <input
               class="rounded-lg text-black"

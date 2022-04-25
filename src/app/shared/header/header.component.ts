@@ -9,7 +9,7 @@ export class HeaderComponent implements OnInit {
   public abierto: boolean = false;
   public indice: number = 0;
   public icono: string[] = ['fa-solid fa-align-justify', 'fa-solid fa-x'];
-  public logo1: string = '../../../assets/images/degradado tonos frios.png';
+  public logo1: string = '../../../assets/images/LOGO NUEVO LOGICIEL.png';
 
   public rutas: string[] = ['', '/contacto', '/nosotros'];
 
