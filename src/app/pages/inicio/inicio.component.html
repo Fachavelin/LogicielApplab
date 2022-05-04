@@ -1,12 +1,14 @@
 <!-- Header -->
-<div class="bg-gradient-to-r from-indigo-700 to-blue-500 w-full">
+<div class="bg-gradient-to-r w-full from-indigo-700 to-blue-500">
   <div class="max-w-screen-2xl mx-auto">
-    <div class="grid grid-cols-1 md:grid-cols-2 mb-6">
-      <div class="text-white">
-        <p class="text-center mt-3 mb-4 font-bold uppercase text-2xl">
+    <div class="mb-6">
+      <div class="text-white mx-7 lg:mx-20 absolute max-w-screen-xl z-30 pt-11">
+        <p
+          class="text-center mt-3 mb-4 lg:m-6 font-bold uppercase text-2xl lg:text-4xl"
+        >
           {{ hero?.titulo }}
         </p>
-        <p class="mx-4 mb-4 text-lg font-semibold">
+        <p class="mb-4 text-lg font-semibold lg:text-2xl">
           {{ hero?.cuerpo }}
         </p>
         <div class="flex justify-center mb-4">
@@ -23,6 +25,10 @@
           [navigation]="true"
           [grabCursor]="true"
           [effect]="'creative'"
+          [autoplay]="{
+            delay: 4000,
+            disableOnInteraction: false
+          }"
           [creativeEffect]="{
             prev: {
               shadow: true,
@@ -42,7 +48,10 @@
             *ngFor="let imagen of imagenes"
             swiperSlide
             class="swiper-slide"
-            ><img class="h-full w-auto" [src]="imagen.imagen" alt=""
+            ><img
+              class="h-128 lg:h-screen w-full object-cover"
+              [src]="imagen.imagen"
+              alt=""
           /></ng-template>
         </swiper>
       </div>

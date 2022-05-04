@@ -5,8 +5,14 @@ import { DatosBody } from 'src/app/interfaces/datos-body.interface';
 import { DatosHero } from '../../interfaces/datos-hero.interface';
 import { ImagenesHero } from '../../interfaces/imagenes-hero.interface';
 
-import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
-SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+import SwiperCore, {
+  Autoplay,
+  Navigation,
+  Pagination,
+  Scrollbar,
+  A11y,
+} from 'swiper';
+SwiperCore.use([Autoplay, Navigation, Pagination, Scrollbar, A11y]);
 
 @Component({
   selector: 'app-inicio',
