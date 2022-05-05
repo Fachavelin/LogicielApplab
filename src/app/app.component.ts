@@ -9,7 +9,7 @@ import { slider } from './route-animations';
   animations: [slider],
 })
 export class AppComponent {
-  title = 'logicellApplabTailwindD';
+  title = 'Logiciel Applab';
 
   prepareRoute(outlet: RouterOutlet) {
     return (

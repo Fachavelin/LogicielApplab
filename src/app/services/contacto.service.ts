@@ -12,7 +12,7 @@ interface Respuesta {
   providedIn: 'root',
 })
 export class ContactoService {
-  private _baseUrl: String = 'https://logiciel-applab-demo.herokuapp.com';
+  private _baseUrl: String = 'https://logicielapplab-backend.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
